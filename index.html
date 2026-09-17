@@ -1,110 +1,291 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PC Core | صيانة حواسيب موقعية باحترافية هندسية</title>
-<meta name="description" content="PC Core: صيانة حواسيب موقعية في كربلاء، العراق. فحص مجاني، توثيق مصوّر لكل خطوة، وتسليم خلال 24 ساعة كحد أقصى — الفني يصل إلى منزلك أو مكتبك مباشرة.">
-<meta name="theme-color" content="#0B0B0A">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PC Core | صيانة حواسيب موقعية باحترافية هندسية">
-<meta property="og:description" content="فحص مجاني، توثيق مصوّر، وتسليم سريع — صيانة حواسيب تصل إلى موقعك في كربلاء، العراق.">
-<meta property="og:locale" content="ar_IQ">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --black:#0B0B0A;
-    --panel:#151412;
-    --panel-2:#1C1B18;
-    --orange:#FF6A00;
-    --rust:#B84D00;
-    --white:#F7F6F2;
-    --grey:#9C9A93;
-    --grey-dim:#6E6C65;
-    --line:#2E2C28;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--black);
-    color:var(--white);
-    font-family:'IBM Plex Sans Arabic', sans-serif;
-    font-weight:400;
-    line-height:1.75;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,h4,.display{
-    font-family:'Cairo', sans-serif;
-    font-weight:800;
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  button{font-family:inherit;}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
-  ::selection{background:var(--orange);color:var(--black);}
-  :focus-visible{outline:2px solid var(--orange);outline-offset:3px;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر مستلزمات الحيوانات الأليفة</title>
+    
+    <!-- خط عربي احترافي -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- سكربت Netlify Identity (مهم جداً للوحة التحكم) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  .cut-lg{clip-path:polygon(28px 0,100% 0,100% calc(100% - 28px),calc(100% - 28px) 100%,0 100%,0 28px);}
-  .cut-md{clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px);}
-  .cut-sm{clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);}
+    <style>
+        :root {
+            --primary-color: #8eb359; /* لون اللوغو الأخضر */
+            --primary-hover: #7a9c4a;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+            --wa-color: #25D366; /* لون الواتساب */
+        }
 
-  .chevron-divider{width:100%;height:44px;}
-  .chevron-divider svg{width:100%;height:100%;display:block;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
 
-  /* ================= NAV ================= */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(11,11,10,0.88);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:15px 32px;max-width:1200px;margin:0 auto;}
-  .nav-logo{height:32px;}
-  .nav-links{display:flex;gap:38px;font-size:14.5px;font-weight:500;}
-  .nav-links a{position:relative;padding:6px 0;color:#D9D8D3;transition:color .2s;}
-  .nav-links a::after{
-    content:"";position:absolute;bottom:0;right:0;width:0;height:2px;background:var(--orange);
-    transition:width .25s ease;
-  }
-  .nav-links a:hover{color:var(--white);}
-  .nav-links a:hover::after{width:100%;}
-  .nav-cta{background:var(--orange);color:var(--black);font-weight:700;font-size:14px;padding:11px 22px;transition:transform .18s, box-shadow .2s;}
-  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,106,0,.3);}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+        }
 
-  /* skip link (a11y) */
-  .skip-link{
-    position:absolute;top:-60px;right:16px;z-index:300;background:var(--orange);color:var(--black);
-    padding:10px 18px;font-weight:700;font-size:14px;transition:top .2s ease;
-  }
-  .skip-link:focus{top:16px;}
+        /* شريط التنقل (الهيدر) */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-  /* mobile nav toggle */
-  .nav-toggle{
-    display:none;width:40px;height:40px;background:transparent;border:1px solid var(--line);
-    align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;
-  }
-  .nav-toggle svg{width:20px;height:20px;stroke:var(--white);fill:none;stroke-width:2;}
-  .nav-toggle .icon-close{display:none;}
-  .nav-toggle[aria-expanded="true"] .icon-open{display:none;}
-  .nav-toggle[aria-expanded="true"] .icon-close{display:block;}
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-  /* mobile slide-in menu */
-  .mobile-menu{
-    position:fixed;inset-inline-end:0;top:0;bottom:0;width:min(320px,84vw);z-index:250;
-    background:var(--panel);border-inline-start:1px solid var(--line);
-    transform:translateX(105%);transition:transform .3s ease;
-    display:flex;flex-direction:column;padding:90px 30px 30px;
-  }
-  [dir="rtl"] .mobile-menu{transform:translateX(-105%);}
-  .mobile-menu.open{transform:translateX(0);}
-  .mobile-menu a{
-    display:block;padding:16px 0;border-bottom:1px solid var(--line);color:var(--white);
-    font-family:'Cairo',sans-serif;font-weight:600;font-size:17px;
-  }
+        .logo-container img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* القسم الترحيبي (Hero) */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* شبكة المنتجات */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* بطاقة المنتج */
+        .product-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .product-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: left;
+            direction: rtl;
+        }
+
+        /* زر الواتساب */
+        .btn-whatsapp {
+            background-color: var(--wa-color);
+            color: var(--white);
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20b858;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo-container">
+            <!-- مسار صورة اللوغو التي تم رفعها -->
+            <img src="1000020786.png" alt="لوغو المتجر">
+            <h1>متجر أليفي</h1>
+        </div>
+    </header>
+
+    <!-- واجهة الترحيب -->
+    <section class="hero">
+        <h2>كل ما يحتاجه صديقك الأليف</h2>
+        <p>نوفر لك أفضل المستلزمات والأطعمة بجودة عالية وأسعار منافسة لتسعد حيوانك الأليف.</p>
+    </section>
+
+    <!-- المنتجات -->
+    <div class="container">
+        <h3 class="section-title">أحدث المنتجات</h3>
+        <!-- سيتم إضافة المنتجات هنا عبر الجافاسكربت -->
+        <div id="products-container" class="products-grid"></div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - متجر أليفي</p>
+    </footer>
+
+    <!-- سكربت جلب وعرض المنتجات -->
+    <script>
+        // ضع رقم هاتفك للواتساب هنا (مع مفتاح الدولة 964 وبدون أصفار)
+        const WHATSAPP_NUMBER = "9647000000000"; 
+
+        // منتجات تجريبية (مؤقتة لحين ربطها بقاعدة بيانات Netlify CMS)
+        const mockProducts = [
+            {
+                title: "طعام قطط رويال كانن 2 كجم",
+                description: "طعام جاف متوازن ومغذي للقطط البالغة، يعزز من صحة الفرو والهضم.",
+                price: "25,000",
+                image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                title: "سرير للكلاب الصغيرة والقطط",
+                description: "سرير دائري ناعم ومريح جداً، يوفر الدفء والأمان لحيوانك الأليف.",
+                price: "15,000",
+                image: "https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                title: "طوق جلدي أنيق للكلاب",
+                description: "طوق متين من الجلد الطبيعي مع مشبك معدني قوي قابل للتعديل.",
+                price: "10,000",
+                image: "https://images.unsplash.com/photo-1606416132922-22ab37bfbecc?auto=format&fit=crop&w=500&q=80"
+            }
+        ];
+
+        // دالة لعرض المنتجات في الصفحة
+        function renderProducts(products) {
+            const container = document.getElementById('products-container');
+            container.innerHTML = ''; // تنظيف الحاوية
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                
+                // رسالة الواتساب المجهزة مسبقاً
+                const whatsappMessage = encodeURIComponent(`مرحباً، أرغب بطلب منتج: ${product.title} بسعر ${product.price} د.ع`);
+                const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
+
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}" class="product-image">
+                    <div class="product-content">
+                        <h4 class="product-title">${product.title}</h4>
+                        <p class="product-desc">${product.description}</p>
+                        <div class="product-price">${product.price} د.ع</div>
+                        <button class="btn-whatsapp" onclick="window.open('${whatsappLink}', '_blank')">
+                            اطلب عبر واتساب 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // تشغيل الدالة وعرض المنتجات عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(mockProducts);
+        });
+    </script>
+</body>
+</html>
   .mobile-menu .nav-cta{margin-top:26px;text-align:center;}
   .menu-backdrop{
     position:fixed;inset:0;z-index:240;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .3s ease;
